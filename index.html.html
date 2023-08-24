@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Arakuur Woods - Shanti Vipin</title>
+    <link rel="icon" href="path-to-your-favicon.ico" type="image/x-icon">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            display: flex;
+        }
+        .book-cover {
+            max-width: 300px;
+            height: auto;
+            border-radius: 5px;
+            flex: 0 0 300px;
+            margin-right: 20px;
+        }
+        .book-details {
+            flex: 1;
+            text-align: right;
+        }
+        .book-title {
+            font-size: 2rem;
+            margin-top: 0;
+        }
+        .book-author {
+            color: #888;
+            margin-top: 5px;
+        }
+        .book-description {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        .rating {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 20px;
+            color: #f39c12;
+        }
+        .rating .star {
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 30px; /* Larger star size */
+            color: #ccc; /* Initial grey color */
+        }
+        .rating .star.selected,
+        .rating .star:hover,
+        .rating .star.selected ~ .star {
+            color: #f39c12; /* Yellow */
+        }
+        .review {
+            margin-top: 20px;
+        }
+        .review textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .review button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .review button:hover {
+            background-color: #2980b9;
+        }
+        .read-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 15px; /* Adjusted padding */
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .read-button:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Arakuur Woods</h1>
+    </header>
+    <div class="container">
+        <img class="book-cover" src="Screenshot_50.jpg" alt="The Arakuur Woods">
+        <div class="book-details">
+            <div class="book-title">The Arakuur Woods</div>
+            <div class="book-author">By Shanti Vipin</div>
+            <div class="book-description">
+                A wise woman (my mom) once said, "Boredom sparks Creativity"... Today's post is about the flame that my boredom sparked!
+                <br>
+                To pass the time, I've been writing books, poems, and making art 😄
+                <br>
+                My book - <strong>The Evanian Escapade: The Arakuur Woods</strong> - is a work in progress and has many parts coming ahead.
+            </div>
+            <div class="rating">
+                <span class="star" onclick="rateBook(1)">&#9733;</span>
+                <span class="star" onclick="rateBook(2)">&#9733;</span>
+                <span class="star" onclick="rateBook(3)">&#9733;</span>
+                <span class="star" onclick="rateBook(4)">&#9733;</span>
+                <span class="star" onclick="rateBook(5)">&#9733;</span>
+            </div>
+            <div class="review">
+                <textarea id="reviewText" placeholder="Write your review"></textarea>
+                <button onclick="submitReview()">Submit Review</button>
+            </div>
+            <a class="read-button" href="https://www.wattpad.com/story/338515942-the-evanian-escapade-the-arakuur-woods?utm_source=website&utm_medium=link&utm_campaign=arakuur-woods" target="_blank">Read on Wattpad</a>
+        </div>
+    </div>
+    <p><strong> We are conducting polls to find the next lucky book. </strong></p>
+    <p><strong> Send us your newly written book on wattpad.</strong></p>
+    <footer>
+        &copy; 2023 Ingen Group of Companies. All rights reserved.
+    </footer>
+    <br></br>
+    <p>        <strong>  Ingen Group of companies is an privately owned  organisation. </strong> </p>
+    <p>        <strong>         To know more click here: <stong></p>
+    <a class = "read-button" href = "About Ingen.html" target = "blank">Know more about our company</a>
+    <script>
+        function rateBook(rating) {
+            const stars = document.querySelectorAll('.star');
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.style.color = '#f39c12'; // Yellow
+                } else {
+                    star.style.color = '#ccc'; // Grey
+                }
+            });
+        }
+
+        function submitReview() {
+            const reviewText = document.getElementById('reviewText').value;
+            if (reviewText.trim() !== '') {
+                window.open('https://www.wattpad.com/story/338515942-the-evanian-escapade-the-arakuur-woods?utm_source=website&utm_medium=link&utm_campaign=arakuur-woods', '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
